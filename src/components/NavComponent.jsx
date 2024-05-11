@@ -14,7 +14,6 @@ function NavComponent() {
 		});
 		setHamburgerMenu(!hamburgerMenu);
 	};
-
 	return (
 		<>
 			<div>
