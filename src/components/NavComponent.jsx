@@ -7,7 +7,6 @@ function NavComponent() {
 		setHamburgerMenu(!hamburgerMenu);
 		isOpenedMenu();
 	};
-
 	const isOpenedMenu = () => {
 		const navItems = document.querySelector(".nav__items").classList.toggle("show-items");
 		Array.from(document.querySelectorAll(".nav__item")).forEach(navItem => {
@@ -20,25 +19,32 @@ function NavComponent() {
 		<>
 			<div>
 				<div className='nav'>
-					{hamburgerMenu ? (
-						<span className='material-symbols-outlined hamburger' onClick={handleHamburgerMenu}>
-							close
-						</span>
-					) : (
-						<span className='material-symbols-outlined hamburger' onClick={handleHamburgerMenu}>
-							menu
-						</span>
-					)}
-					<ul className='nav__items'>
-						<li className='nav__item' style={{ fontWeight: "bold" }}>
-							Home
-						</li>
-						<li className='nav__item'>Best Shoes</li>
-						<li className='nav__item'>Accesories</li>
-						<li className='nav__item'>Popular Brands</li>
-						<li className='nav__item'>Training</li>
-						<li className='nav__item'>Running Calculator</li>
-					</ul>
+					<div className='nav__container'>
+						{hamburgerMenu ? (
+							<span className='material-symbols-outlined hamburger' onClick={handleHamburgerMenu}>
+								close
+							</span>
+						) : (
+							<span className='material-symbols-outlined hamburger' onClick={handleHamburgerMenu}>
+								menu
+							</span>
+						)}
+						<ul className='nav__items'>
+							<li className='nav__item' style={{ fontWeight: "bold" }}>
+								Home
+							</li>
+							<li className='nav__item'>Best Shoes</li>
+							<li className='nav__item'>Accesories</li>
+							<li className='nav__item'>Popular Brands</li>
+							<li className='nav__item'>Training</li>
+							<li className='nav__item'>Running Calculator</li>
+						</ul>
+					</div>
+				</div>
+
+				<div className='nav__search-container'>
+					<input className='nav__search-input'></input>
+					<button className='nav__search-btn'>Search</button>
 				</div>
 
 				<div className='nav__photo'></div>
