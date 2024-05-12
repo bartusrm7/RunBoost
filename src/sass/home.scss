@@ -19,9 +19,9 @@ body {
 		top: 50%;
 		right: 50%;
 		transform: translate(50%, -50%);
-		z-index: 1;
-		border: 1px solid #212a31;
+		border: 1px solid #033153;
 		border-radius: 15px;
+		z-index: 1;
 		overflow: hidden;
 	}
 	&__search-input {
@@ -37,6 +37,7 @@ body {
 	&__search-btn {
 		padding: 1em;
 		background-color: #d1d7e0;
+		color: #212a31;
 		font-size: 0.7rem;
 		border: none;
 	}
