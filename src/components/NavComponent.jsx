@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 
 function NavComponent() {
 	const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -30,24 +31,19 @@ function NavComponent() {
 						)}
 						<ul className='nav__items'>
 							<li className='nav__item' style={{ fontWeight: "bold" }}>
-								Home
+								<Link to='/'>Home</Link>
 							</li>
 							<li className='nav__item'>Best Shoes</li>
 							<li className='nav__item'>Accesories</li>
 							<li className='nav__item'>Popular Brands</li>
-							<li className='nav__item'>Training</li>
+							<li className='nav__item'>
+								<Link to='/training-calculator'>Training</Link>
+							</li>
 							<li className='nav__item'>Running Calculator</li>
 						</ul>
 					</div>
 				</div>
-
-				<div className='nav__search-container'>
-					<input className='nav__search-input'></input>
-					<button className='nav__search-btn'>Search</button>
-				</div>
-
-				<div className='nav__photo'></div>
-				<div className='nav__shadow'></div>
+				<Home />
 			</div>
 		</>
 	);

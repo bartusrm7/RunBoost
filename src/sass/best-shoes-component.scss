@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #212a31;
+	color: #d1d7e0;
+	font-family: "Montserrat", sans-serif;
+	font-size: 62.5%;
+}
+
+.best-shoes {
+	height: 130vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	&__finder-section-container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__shoes-to-choose-section-container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #a64ac9;
+		&:nth-child(2) {
+			background-color: #d1d7e0;
+			color: #212a31;
+		}
+	}
+	&__label {
+		margin: 1em;
+		text-align: center;
+	}
+	&__short-description {
+		margin: 1em 2em;
+		font-size: 0.7rem;
+		text-align: center;
+	}
+	&__running-shoes-finder-btn {
+		padding: 0.5em 1em;
+		margin: 1em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-size: 0.8rem;
+		font-weight: bold;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+	&__running-shoes-finder-btn a {
+		text-decoration: none;
+		color: #d1d7e0;
+	}
+	&__shoes-categories-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	&__shoes-category-name {
+		position: relative;
+		z-index: 1;
+	}
+	&__shoes-category-item {
+		position: relative;
+		margin: 1em 2em;
+		width: 200px;
+		height: 250px;
+		color: #d1d7e0;
+		border-radius: 15px;
+		transition: transform 0.3s ease-out;
+		object-fit: cover;
+		background-position: center;
+		background-size: cover;
+		overflow: hidden;
+	}
+	&__shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+	.asphalt {
+		background-image: url("../assets/shoes/asphalt-shoes.avif");
+	}
+	.trail {
+		background-image: url("../assets/shoes/trail-shoes.jpg");
+	}
+	&__shoes-category-name {
+		margin: 1em 0;
+		text-align: center;
+	}
+}
+@media (min-width: 376px) {
+	.best-shoes {
+		&__label {
+			font-size: 1rem;
+		}
+		&__short-description {
+			font-size: 0.8rem;
+		}
+		&__shoes-category-item {
+			width: 250px;
+		}
+	}
+}
+@media (min-width: 576px) {
+	.best-shoes {
+		&__label {
+			font-size: 1.2rem;
+		}
+		&__short-description {
+			font-size: 0.9rem;
+		}
+		&__running-shoes-finder-btn {
+			font-size: 0.9rem;
+		}
+		&__shoes-categories-container {
+			display: flex;
+			flex-direction: row;
+		}
+		&__shoes-category-name {
+			font-size: 0.8rem;
+		}
+		&__shoes-category-item {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.best-shoes {
+		&__label {
+			font-size: 1.4rem;
+		}
+		&__short-description {
+			font-size: 1rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.best-shoes {
+		&__label {
+			font-size: 1.6rem;
+		}
+		&__running-shoes-finder-btn {
+			font-size: 1rem;
+		}
+		&__shoes-category-name {
+			font-size: 1rem;
+		}
+	}
+}
