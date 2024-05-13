@@ -7,7 +7,7 @@ function BestShoesComponent() {
 				<div className='best-shoes__finder-section-container'>
 					<h2 className='best-shoes__label'>FIND YOUR PERFECT SHOES!</h2>
 					<p className='best-shoes__short-description'>
-						Answer 5 simple questions and we'll recommend three pair of shoes that will work well for you.
+						Answer for 5 simple questions and we will recommend three pair of shoes that will work well for you.
 					</p>
 					<button className='best-shoes__running-shoes-finder-btn'>
 						<Link to='/running-shoes-finder'>Running shoes finder</Link>

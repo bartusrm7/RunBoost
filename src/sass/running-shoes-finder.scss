@@ -7,15 +7,90 @@
 }
 body {
 	background-color: #212a31;
-	color: #d1d7e0;
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
 .running-shoes-finder {
 	height: 100vh;
-	&__container {
-		width: 100vw;
-		height: 100vh;
-		background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #d1d7e0;
+	&__start-container {
+		text-align: center;
+	}
+	&__name {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	&__short-discription {
+		margin: 2em 3em;
+		font-size: 0.7rem;
+	}
+	&__start-btn {
+		padding: 0.5em 1em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-weight: bold;
+		border: none;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+	&__search-container {
+	}
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+@media (min-width: 376px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 1.5rem;
+		}
+		&__short-discription {
+			font-size: 0.85rem;
+		}
+		&__start-btn {
+			font-size: 1rem;
+		}
+	}
+}
+@media (min-width: 576px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 1.8rem;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 2.2rem;
+		}
+		&__short-discription {
+			font-size: 0.95rem;
+		}
+		&__start-btn {
+			padding: 0.75em 1.5em;
+			font-size: 1.1rem;
+			border-radius: 20px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 2.5rem;
+		}
+		&__short-discription {
+			font-size: 1.05rem;
+		}
+		&__start-btn {
+			font-size: 1.2rem;
+		}
 	}
 }
