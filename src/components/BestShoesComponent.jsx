@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
-import RunningShoesFinder from "./RunningShoesFinder";
 
 function BestShoesComponent() {
-	const handleRunningShoesFinder = () => {};
-
 	return (
 		<div>
 			<div className='best-shoes'>
@@ -12,7 +9,7 @@ function BestShoesComponent() {
 					<p className='best-shoes__short-description'>
 						Answer 5 simple questions and we'll recommend three pair of shoes that will work well for you.
 					</p>
-					<button className='best-shoes__running-shoes-finder-btn' onClick={handleRunningShoesFinder}>
+					<button className='best-shoes__running-shoes-finder-btn'>
 						<Link to='/running-shoes-finder'>Running shoes finder</Link>
 					</button>
 				</div>
