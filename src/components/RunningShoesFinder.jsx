@@ -38,6 +38,11 @@ function RunningShoesFinder() {
 		} else if (distances === "Less than 20km" && runType === "Training" && surfaceType === "Trail") {
 			chosenShoes = ["Hoka Speedgoat", "Adidas Adios Pro 4"];
 		}
+
+		if (distances === "" || runType === "" || surfaceType === "") {
+			return;
+		}
+
 		setChosenShoesForUser(chosenShoes);
 		setChosenShoesContainer(true);
 		setIsStarted(false);
