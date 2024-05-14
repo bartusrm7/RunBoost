@@ -16,11 +16,13 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	color: #d1d7e0;
 	&__start-container {
 		text-align: center;
 	}
 	&__name {
+		margin: 0 1em;
 		font-size: 1.2rem;
 		text-align: center;
 	}
@@ -29,7 +31,7 @@ body {
 		font-size: 0.7rem;
 	}
 	&__start-btn {
-		padding: 0.5em 1em;
+		padding: 0.5em 1.5em;
 		background-color: #a64ac9;
 		color: #d1d7e0;
 		font-weight: bold;
@@ -38,6 +40,44 @@ body {
 		cursor: pointer;
 	}
 	&__search-container {
+		margin: 3em;
+	}
+	&__choosing-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		label {
+			margin: 0.5em 2em 0.5em 0;
+			font-size: 0.7rem;
+		}
+		select {
+			padding: 0 0.25em;
+			width: 40vw;
+			background-color: #d1d7e0;
+			color: #212a31;
+			border-radius: 5px;
+		}
+	}
+	&__accept-choices-btn {
+		padding: 0.5em 1.5em;
+		margin-top: 3em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-weight: bold;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+	&__chosen-shoes-container {
+	}
+	&__found-shoes-container {
+		margin: 2em;
+		width: 180px;
+		height: 220px;
+		display: flex;
+		background-color: #d1d7e0;
+		color: #212a31;
+		border: 2px solid #a64ac9;
+		border-radius: 10px;
 	}
 }
 .hide {
@@ -57,12 +97,35 @@ body {
 		&__start-btn {
 			font-size: 1rem;
 		}
+		&__choosing-container {
+			select {
+				width: 25vw;
+			}
+		}
+		&__accept-choices-btn {
+			font-size: 1rem;
+		}
+		&__found-shoes-container {
+			width: 220px;
+			height: 250px;
+		}
 	}
 }
 @media (min-width: 576px) {
 	.running-shoes-finder {
 		&__name {
 			font-size: 1.8rem;
+		}
+		&__choosing-container {
+			label {
+				font-size: 0.8rem;
+			}
+			select {
+				width: 20vw;
+			}
+		}
+		&__found-shoes-big-container {
+			display: flex;
 		}
 	}
 }
@@ -79,6 +142,16 @@ body {
 			font-size: 1.1rem;
 			border-radius: 20px;
 		}
+		&__choosing-container {
+			select {
+				width: 15vw;
+			}
+		}
+		&__accept-choices-btn {
+			padding: 0.75em 1.5em;
+			font-size: 1.1rem;
+			border-radius: 20px;
+		}
 	}
 }
 @media (min-width: 992px) {
@@ -90,6 +163,17 @@ body {
 			font-size: 1.05rem;
 		}
 		&__start-btn {
+			font-size: 1.2rem;
+		}
+		&__choosing-container {
+			label {
+				font-size: 0.9rem;
+			}
+			select {
+				width: 12vw;
+			}
+		}
+		&__accept-choices-btn {
 			font-size: 1.2rem;
 		}
 	}
