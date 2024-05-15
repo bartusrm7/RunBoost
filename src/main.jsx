@@ -4,8 +4,10 @@ import App from "./App.jsx";
 import "./sass/nav-component.scss";
 import "./sass/home.scss";
 import "./sass/best-shoes-component.scss";
+import "./sass/accesories-component.scss";
 import "./sass/running-shoes-finder.scss";
 import "./sass/training-calculator.scss";
+import "./sass/footer-component.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>

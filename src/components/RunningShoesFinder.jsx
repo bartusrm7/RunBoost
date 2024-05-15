@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function RunningShoesFinder() {
 	const [isStarted, setIsStarted] = useState(false);
@@ -8,48 +8,29 @@ function RunningShoesFinder() {
 		{ name: "What type of running you doing?", value: ["", "Training", "Race"] },
 		{ name: "Where will you run?", value: ["", "Asphalt", "Trail"] },
 	]);
-	const [userChoices, setUserChoices] = useState({});
+	const [userChoices, setUserChoices] = useState([
+		{ name: "sex", value: [] },
+		{ name: "distances", value: [] },
+		{ name: "runType", value: [] },
+		{ name: "surfaceType", value: [] },
+	]);
 	const [chosenShoesContainer, setChosenShoesContainer] = useState(false);
-	const [chosenShoesForUser, setChosenShoesForUser] = useState();
+	// const [chosenShoesForUser, setChosenShoesForUser] = useState([]);
 
 	const handleIsStarted = () => setIsStarted(!isStarted);
 	const handleChosenShoesContainer = () => setChosenShoesContainer(!chosenShoesContainer);
-	const kokoRef = useRef(null);
-	function handleChosenOptions(name, value) {
+	const handleChosenOptions = (name, value) => {
 		setUserChoices(prevState => ({
 			...prevState,
-			[name]: value,
+			[name]: choosingName[value],
 		}));
-	}
+	};
+
 	function handleChosenShoesByUser() {
 		const { distances, runType, surfaceType } = userChoices;
-		let chosenShoes = [];
-
-		if (distances === "More than 20km" && runType === "Race" && surfaceType === "Asphalt") {
-			chosenShoes = ["Nike Alphafly", "Adidas Adios Pro 4"];
-		} else if (distances === "Less than 20km" && runType === "Training" && surfaceType === "Asphalt") {
-			chosenShoes = ["Nike Pegasus", "Saucony Ride"];
-		} else if (distances === "More than 20km" && runType === "Training" && surfaceType === "Asphalt") {
-			chosenShoes = ["New Balance FuelCell Rebel V4", "Asics Magic Speed"];
-		} else if (distances === "Less than 20km" && runType === "Race" && surfaceType === "Trail") {
-			chosenShoes = ["Salomon Ultra Glide", "Adidas Terrex"];
-		} else if (distances === "More than 20km" && runType === "Training" && surfaceType === "Trail") {
-			chosenShoes = ["Nike Juniper", "Asics Fuji"];
-		} else if (distances === "Less than 20km" && runType === "Training" && surfaceType === "Trail") {
-			chosenShoes = ["Hoka Speedgoat", "Adidas Adios Pro 4"];
-		}
-
-		if (distances === "" || runType === "" || surfaceType === "") {
-			return;
-		}
-
-		setChosenShoesForUser(chosenShoes);
-		setChosenShoesContainer(true);
+		handleChosenOptions();
+		handleChosenShoesContainer();
 		setIsStarted(false);
-
-		console.log(userChoices);
-		console.log(chosenShoes);
-		console.log(chosenShoesForUser);
 	}
 	return (
 		<div>
@@ -69,7 +50,7 @@ function RunningShoesFinder() {
 					{choosingName.map((item, index) => (
 						<div key={index} className='running-shoes-finder__choosing-container'>
 							<label>{item.name}</label>
-							<select onChange={e => handleChosenOptions(item.name, e.target.value)}>
+							<select onChange={e => setUserChoices(e.target.value)}>
 								{item.value &&
 									item.value.map((option, index) => (
 										<option key={index} value={option}>
