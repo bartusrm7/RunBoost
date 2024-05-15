@@ -33,7 +33,7 @@ function NavComponent() {
 								<Link to='/'>Home</Link>
 							</li>
 							<li className='nav__item'>Best Shoes</li>
-							<li className='nav__item'>Accesories</li>
+							<li className='nav__item'>Watches</li>
 							<li className='nav__item'>Popular Brands</li>
 							<li className='nav__item'>Training</li>
 							<li className='nav__item'>

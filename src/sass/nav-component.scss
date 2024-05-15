@@ -27,12 +27,8 @@ body {
 		right: 0;
 		margin: 0 0.5em;
 		transform: translateY(-50%);
-		transition: color 0.3s;
 		z-index: 1000;
 		cursor: pointer;
-		&:hover {
-			color: #212a31;
-		}
 	}
 	&__items {
 		width: 100%;
@@ -45,8 +41,12 @@ body {
 		z-index: 1;
 	}
 	&__items a {
-		text-decoration: none;
 		color: #d1d7e0;
+		text-decoration: none;
+		transition: color 0.3s;
+		&:hover {
+			color: #212a31;
+		}
 	}
 	&__item {
 		padding: 0.5em;

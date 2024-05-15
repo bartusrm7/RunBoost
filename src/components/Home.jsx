@@ -1,6 +1,6 @@
 import NavComponent from "./NavComponent";
 import BestShoesComponent from "./BestShoesComponent";
-import AccesoriesComponent from "./AccesoriesComponent";
+import AccesoriesComponent from "./WatchesComponent";
 
 function Home() {
 	return (

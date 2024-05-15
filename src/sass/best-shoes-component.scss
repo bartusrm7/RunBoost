@@ -39,7 +39,7 @@ body {
 		}
 	}
 	&__label {
-		margin: 1em;
+		margin-top: 1em;
 		text-align: center;
 	}
 	&__short-description {
@@ -139,7 +139,7 @@ body {
 		}
 		&__shoes-category-item {
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
 	}
