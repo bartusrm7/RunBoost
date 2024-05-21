@@ -2,36 +2,32 @@ import { useState } from "react";
 
 function RunningShoesFinder() {
 	const [isStarted, setIsStarted] = useState(false);
-	const [choosingName, setChoosingName] = useState([
-		{ name: "What is your sex?", value: ["", "Male", "Female"] },
-		{ name: "What is your distances?", value: ["", "More than 20km", "Less than 20km"] },
-		{ name: "What type of running you doing?", value: ["", "Training", "Race"] },
-		{ name: "Where will you run?", value: ["", "Asphalt", "Trail"] },
-	]);
-	const [userChoices, setUserChoices] = useState([
-		{ name: "sex", value: [] },
-		{ name: "distances", value: [] },
-		{ name: "runType", value: [] },
-		{ name: "surfaceType", value: [] },
-	]);
+	const questions = [
+		{ id: 1, question: "What is your sex?", values: ["Male", "Female"] },
+		{ id: 2, question: "What is your distances?", values: ["More than 20km", "Less than 20km"] },
+		{ id: 3, question: "What type of running you doing?", values: ["Training", "Race"] },
+		{ id: 4, question: "Where will you run?", values: ["Asphalt", "Trail"] },
+	];
+	const [userAnswers, setUserAnswers] = useState([]);
 	const [chosenShoesContainer, setChosenShoesContainer] = useState(false);
-	// const [chosenShoesForUser, setChosenShoesForUser] = useState([]);
+	const [selectedAnswers, setSelectedAnswers] = useState({});
 
 	const handleIsStarted = () => setIsStarted(!isStarted);
-	const handleChosenShoesContainer = () => setChosenShoesContainer(!chosenShoesContainer);
-	const handleChosenOptions = (name, value) => {
-		setUserChoices(prevState => ({
+	// const handleChosenShoesContainer = () => setChosenShoesContainer(!chosenShoesContainer);
+
+	const handleChosenOptions = (question, value) => {
+		setSelectedAnswers(prevState => ({
 			...prevState,
-			[name]: choosingName[value],
+			[question]: [value],
 		}));
+		setUserAnswers([...userAnswers, selectedAnswers]);
 	};
 
 	function handleChosenShoesByUser() {
-		const { distances, runType, surfaceType } = userChoices;
-		handleChosenOptions();
-		handleChosenShoesContainer();
-		setIsStarted(false);
+		console.log(selectedAnswers);
+		console.log(userAnswers);
 	}
+
 	return (
 		<div>
 			<div className='running-shoes-finder'>
@@ -47,16 +43,16 @@ function RunningShoesFinder() {
 				</div>
 
 				<div className={`running-shoes-finder__search-container ${isStarted ? "show" : "hide"}`}>
-					{choosingName.map((item, index) => (
-						<div key={index} className='running-shoes-finder__choosing-container'>
-							<label>{item.name}</label>
-							<select onChange={e => setUserChoices(e.target.value)}>
-								{item.value &&
-									item.value.map((option, index) => (
-										<option key={index} value={option}>
-											{option}
-										</option>
-									))}
+					{questions.map(({ id, question, values }) => (
+						<div key={id} className='running-shoes-finder__choosing-container'>
+							<label>{question}</label>
+							<select onChange={e => handleChosenOptions(questions, e.target.value)}>
+								<option value=''></option>
+								{values.map(value => (
+									<option key={value} value={value}>
+										{value}
+									</option>
+								))}
 							</select>
 						</div>
 					))}

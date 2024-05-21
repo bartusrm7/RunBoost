@@ -5,8 +5,10 @@ import "./sass/nav-component.scss";
 import "./sass/best-shoes-page.scss";
 import "./sass/best-shoes-component.scss";
 import "./sass/watches-component.scss";
+import "./sass/popular-brands-page.scss";
 import "./sass/running-shoes-finder.scss";
 import "./sass/training-calculator.scss";
+import "./sass/watches-page.scss";
 import "./sass/footer-component.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
