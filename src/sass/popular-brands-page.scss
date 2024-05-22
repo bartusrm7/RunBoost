@@ -10,6 +10,7 @@ body {
 	font-size: 62.5%;
 }
 .popular-brands {
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -45,23 +46,18 @@ body {
 		text-align: center;
 	}
 	&__brand-section {
+		position: relative;
+		height: 30vh;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		border: 1px solid #d1d7e0;
 	}
-	&__brand-name-section {
+	&__brand-name {
 		display: grid;
 		height: 100%;
-		.name {
-			padding: 1em;
-			font-weight: bold;
-		}
-		div {
-			padding: 0.5em;
-			border: 1px solid #d1d7e0;
-		}
 	}
 	&__general-discription {
 		margin-bottom: 1.5em;
@@ -84,6 +80,37 @@ body {
 		align-items: center;
 		font-size: 0.7rem;
 		border: 1px solid #d1d7e0;
+	}
+	&__brand-logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+	.adidas {
+		background-image: url("../assets/brands/adidas.jpg");
+	}
+	.nike {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.asics {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.saucony {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.brooks {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.hoka {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.salomon {
+		background-image: url("../assets/brands/nike.png");
+	}
+	.altra {
+		background-image: url("../assets/brands/nike.png");
 	}
 }
 @media (min-width: 376px) {
@@ -111,13 +138,16 @@ body {
 		}
 		&__brand-section {
 			display: grid;
-			grid-template-columns: 50% 25% 25%;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
 		}
 		&__brand-general-section {
 			width: 65vw;
+		}
+		&__brand-general-sections {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 		}
 		&__name-brand-section {
 			width: 100%;
@@ -130,7 +160,7 @@ body {
 			font-size: 2.2rem;
 		}
 		&__short-discription {
-			width: 50vw;
+			width: 55vw;
 			font-size: 0.95rem;
 		}
 		&__brand-general-section {
@@ -153,6 +183,10 @@ body {
 		}
 		&__brand-general-section {
 			font-size: 1.05rem;
+		}
+		&__brand-general-sections {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }

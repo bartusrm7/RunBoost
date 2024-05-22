@@ -29,7 +29,6 @@ body {
 	}
 	&__brand-general-section {
 		margin: 3em 1em;
-		width: 220px;
 		display: grid;
 		background-color: #212a31;
 		color: #d1d7e0;
@@ -50,40 +49,47 @@ body {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		overflow-x: auto;
 	}
 	&__brand-name-section {
-		display: grid;
 		height: 100%;
+		display: grid;
 		.name {
-			padding: 1em;
 			font-weight: bold;
+			text-align: right;
 		}
 		div {
-			padding: 0.5em;
+			padding: 0.5em 1em;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			border: 1px solid #d1d7e0;
 		}
 	}
-	&__general-discription {
-		margin-bottom: 1.5em;
+	&__brand-grid-row {
 		display: grid;
-		align-items: center;
-		text-align: center;
-		border-top: 1px solid #a64ac9;
-		border-bottom: 1px solid #a64ac9;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	&__name-brand-section,
-	.brand {
-		padding: 0 0.5em;
-		margin: 1em 0;
-		height: 100%;
-		display: flex;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		justify-content: center;
 		align-items: center;
-		font-size: 0.7rem;
-		border: 1px solid #d1d7e0;
+		div {
+			padding: 0.5em;
+			min-width: 18vw;
+			max-width: 25vw;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #d1d7e0;
+			overflow: hidden;
+		}
+	}
+	.narrow-view {
+		display: block;
+	}
+	.wide-view {
+		display: none;
 	}
 }
 @media (min-width: 376px) {
@@ -95,12 +101,20 @@ body {
 			font-size: 0.85rem;
 		}
 		&__brand-general-section {
-			width: 300px;
 			font-size: 0.85rem;
 		}
-		&__name-brand-section,
-		.brand {
-			font-size: 0.8rem;
+		&__brand-grid-row {
+			div {
+				width: 50px;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.watches-page {
+		&__brand-name-section {
+			min-width: 10vw;
+			max-width: 25vw;
 		}
 	}
 }
@@ -119,8 +133,11 @@ body {
 		&__brand-general-section {
 			width: 65vw;
 		}
-		&__name-brand-section {
-			width: 100%;
+		.narrow-view {
+			display: none;
+		}
+		.wide-view {
+			display: block;
 		}
 	}
 }
@@ -135,10 +152,6 @@ body {
 		}
 		&__brand-general-section {
 			font-size: 0.95rem;
-		}
-		&__name-brand-section,
-		.brand {
-			font-size: 0.9rem;
 		}
 	}
 }

@@ -28,7 +28,7 @@ function BestShoesPage() {
 					</div>
 				</div>
 
-				<div className='best-shoes-page__shoes-sections'>
+				<div className='best-shoes-page__shoes-sections narrow-view'>
 					<div className='best-shoes-page__shoes-general-section asphalt'>
 						<div className='best-shoes-page__shoes-type-name'>ASPHALT</div>
 						<div className='best-shoes-page__shoes-section'>
@@ -42,7 +42,6 @@ function BestShoesPage() {
 									<div className='shoes'>{asphalt.drop}</div>
 									<div className='best-shoes-page__name-shoes-section'>Price</div>
 									<div className='shoes'>{asphalt.price}</div>
-									<div className='best-shoes-page__discription'></div>
 								</div>
 							))}
 						</div>
@@ -63,6 +62,84 @@ function BestShoesPage() {
 									<div className='shoes'>{trail.price}</div>
 								</div>
 							))}
+						</div>
+					</div>
+				</div>
+
+				<div className='best-shoes-page__shoes-sections wider-view'>
+					<div className='best-shoes-page__shoes-general-section asphalt'>
+						<div className='best-shoes-page__shoes-type-name'>ASPHALT</div>
+						<div className='best-shoes-page__wide-shoes-section-wider'>
+							<div className='best-shoes-page__name-shoes-section-wider'>Name</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Weight</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Drop</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Price</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{asphaltShoes.map((asphalt, index) => (
+									<div key={index}>
+										<div className='shoes'>{asphalt.name}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{asphaltShoes.map((asphalt, index) => (
+									<div key={index}>
+										<div className='shoes'>{asphalt.weight}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{asphaltShoes.map((asphalt, index) => (
+									<div key={index}>
+										<div className='shoes'>{asphalt.drop}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{asphaltShoes.map((asphalt, index) => (
+									<div key={index}>
+										<div className='shoes'>{asphalt.price}</div>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+
+					<div className='best-shoes-page__shoes-general-section trail'>
+						<div className='best-shoes-page__shoes-type-name'>TRAIL</div>
+						<div className='best-shoes-page__wide-shoes-section-wider'>
+							<div className='best-shoes-page__name-shoes-section-wider'>Name</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Weight</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Drop</div>
+							<div className='best-shoes-page__name-shoes-section-wider'>Price</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{trailShoes.map((trail, index) => (
+									<div key={index}>
+										<div className='shoes'>{trail.name}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{trailShoes.map((trail, index) => (
+									<div key={index}>
+										<div className='shoes'>{trail.weight}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{trailShoes.map((trail, index) => (
+									<div key={index}>
+										<div className='shoes'>{trail.drop}</div>
+									</div>
+								))}
+							</div>
+							<div className='best-shoes-page__general-discription-wider name-photo'>
+								{trailShoes.map((trail, index) => (
+									<div key={index}>
+										<div className='shoes'>{trail.price}</div>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>

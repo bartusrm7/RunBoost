@@ -71,6 +71,12 @@ body {
 		font-size: 0.7rem;
 		border: 1px solid #d1d7e0;
 	}
+	.narrow-view {
+		display: block;
+	}
+	.wider-view {
+		display: none;
+	}
 }
 @media (min-width: 376px) {
 	.best-shoes-page {
@@ -81,7 +87,7 @@ body {
 			font-size: 0.85rem;
 		}
 		&__shoes-general-section {
-			width: 300px;
+			width: 350px;
 			font-size: 0.85rem;
 		}
 		&__name-shoes-section,
@@ -96,10 +102,34 @@ body {
 			font-size: 1.8rem;
 		}
 		&__shoes-general-section {
-			width: 65vw;
+			width: 95vw;
 		}
 		&__name-shoes-section {
 			width: 100%;
+		}
+		&__wide-shoes-section-wider {
+			display: grid;
+			grid-template-columns: 40% 20% 20% 20%;
+			text-align: center;
+		}
+		&__name-shoes-section-wider {
+			padding: 1.5em 0;
+			font-weight: bold;
+			border: 1px solid #d1d7e0;
+		}
+		&__general-discription-wider {
+			display: flex;
+			flex-direction: column;
+		}
+		.shoes {
+			padding: 1em 0.5em;
+			margin: 0;
+		}
+		.narrow-view {
+			display: none;
+		}
+		.wider-view {
+			display: block;
 		}
 	}
 }
@@ -107,6 +137,9 @@ body {
 	.best-shoes-page {
 		&__name-section {
 			font-size: 2.2rem;
+		}
+		&__shoes-general-section {
+			width: 80vw;
 		}
 		&__short-discription {
 			width: 50vw;
@@ -125,6 +158,9 @@ body {
 	.best-shoes-page {
 		&__name-section {
 			font-size: 2.5rem;
+		}
+		&__shoes-general-section {
+			width: 65vw;
 		}
 		&__short-discription {
 			width: 40vw;
