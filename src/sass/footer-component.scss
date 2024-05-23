@@ -6,10 +6,19 @@
 	margin: 0;
 }
 body {
-	background-color: #212a31;
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
 .footer {
-	height: 100vh;
+	height: 30vh;
+	background-color: #d1d7e0;
+	color: #212a31;
+	&__main-bottom-footer {
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #212a31;
+		color: #d1d7e0;
+	}
 }

@@ -10,7 +10,7 @@ body {
 	font-size: 62.5%;
 }
 .training {
-	min-height: 100vh;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -18,99 +18,104 @@ body {
 	background-color: #212a31;
 	color: #d1d7e0;
 	&__start-container {
+		width: 80vw;
 		text-align: center;
 	}
 	&__name-section {
-		margin: 1em 0;
+		margin: 1em;
 		font-size: 1.2rem;
 	}
 	&__short-discription {
-		width: 70vw;
 		font-size: 0.7rem;
 	}
-	&__brand-general-section {
+	&__run-general-section {
 		margin: 3em 1em;
-		width: 220px;
-		display: grid;
-		background-color: white;
 		font-size: 0.7rem;
-		border-radius: 10px;
-		border: 1px solid #a64ac9;
-		overflow: hidden;
 	}
-	&__brand-type-name {
-		padding: 1em;
+	&__run-section {
+		margin: 2em 1em;
+		text-align: center;
+	}
+	&__run-name {
+		margin: 1em 2em;
 		font-weight: bold;
-		background-color: #a64ac9;
-		text-align: center;
 	}
-	&__brand-section {
-		position: relative;
-		height: 30vh;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid #d1d7e0;
+	&__run-dist {
+		margin: 1em;
 	}
-	&__brand-name {
-		display: grid;
-		height: 100%;
-	}
-	&__general-discription {
-		margin-bottom: 1.5em;
-		display: grid;
-		align-items: center;
-		text-align: center;
-		border-top: 1px solid #a64ac9;
-		border-bottom: 1px solid #a64ac9;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	&__name-brand-section,
-	.brand {
-		padding: 0 0.5em;
-		margin: 1em 0;
-		height: 100%;
+	&__download-container {
+		position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 0.7rem;
-		border: 1px solid #d1d7e0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
 	}
-	&__brand-logo {
+	&__download-window {
+		position: relative;
+		width: 200px;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		border-radius: 10px;
+		z-index: 10;
+		.cancel {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0.05em 0.2em;
+			margin: 0.75em;
+			background-color: #a64ac9;
+			color: #d1d7e0;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input {
+			padding: 0.25em 0.5em;
+			margin: 1.5em 0 1em;
+			width: 120px;
+			background-color: #212a31;
+			color: #d1d7e0;
+			font-size: 0.7rem;
+			border-radius: 10px;
+			&::placeholder {
+				color: #d1d7e0;
+			}
+		}
+		.download {
+			padding: 0.25em 1em;
+			background-color: #a64ac9;
+			color: #d1d7e0;
+			font-size: 0.7rem;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	}
+	&__shadow {
 		position: absolute;
+		top: 0;
+		right: 0;
 		width: 100%;
 		height: 100%;
-		background-size: cover;
-		background-position: center;
+		background-color: rgba(0, 0, 0, 0.85);
 	}
-	.adidas {
-		background-image: url("../assets/brands/adidas.jpg");
+	.download-btn {
+		padding: 0.5em 1.5em;
+		margin: 1em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-size: 0.8rem;
+		font-weight: bold;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
 	}
-	.nike {
-		background-image: url("../assets/brands/nike.jpg");
-	}
-	.asics {
-		background-image: url("../assets/brands/asics.png");
-	}
-	.saucony {
-		background-image: url("../assets/brands/saucony.png");
-	}
-	.brooks {
-		background-image: url("../assets/brands/brooks.jpg");
-	}
-	.hoka {
-		background-image: url("../assets/brands/hoka.png");
-	}
-	.salomon {
-		background-image: url("../assets/brands/salomon.png");
-	}
-	.altra {
-		background-image: url("../assets/brands/altra.jpg");
-	}
+}
+.display {
+	display: flex;
 }
 @media (min-width: 376px) {
 	.training {
@@ -120,13 +125,30 @@ body {
 		&__short-discription {
 			font-size: 0.85rem;
 		}
-		&__brand-general-section {
-			width: 300px;
+		&__run-general-section {
+			width: 70vw;
 			font-size: 0.85rem;
 		}
-		&__name-brand-section,
-		.brand {
+		&__name-run-section,
+		.run {
 			font-size: 0.8rem;
+		}
+		&__download-window {
+			width: 250px;
+			height: 130px;
+			font-size: 2rem;
+			.cancel {
+				padding: 0.1em 0.3em;
+			}
+			input {
+				margin-top: 1.5em;
+				width: 150px;
+				font-size: 0.8rem;
+			}
+			.download {
+				padding: 0.35em 1em;
+				font-size: 0.8rem;
+			}
 		}
 	}
 }
@@ -135,57 +157,94 @@ body {
 		&__name-section {
 			font-size: 1.8rem;
 		}
-		&__brand-section {
-			display: grid;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
+		&__run-section {
 		}
-		&__brand-general-section {
-			width: 65vw;
+		&__run-general-section {
+			width: 80vw;
 		}
-		&__brand-general-sections {
+		&__run-general-sections {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 		}
-		&__name-brand-section {
+		&__name-run-section {
 			width: 100%;
+		}
+		&__download-window {
+			width: 270px;
+			height: 140px;
+			font-size: 2rem;
+			.cancel {
+				padding: 0.15em 0.4em;
+			}
+			input {
+				margin-top: 1.5em;
+				width: 170px;
+				font-size: 0.9rem;
+			}
+			.download {
+				padding: 0.4em 1em;
+				font-size: 0.9rem;
+			}
 		}
 	}
 }
 @media (min-width: 768px) {
 	.training {
+		&__start-container {
+			width: 70vw;
+		}
 		&__name-section {
 			font-size: 2.2rem;
 		}
 		&__short-discription {
-			width: 55vw;
 			font-size: 0.95rem;
 		}
-		&__brand-general-section {
+		&__run-general-section {
 			font-size: 0.95rem;
 		}
-		&__name-brand-section,
-		.brand {
-			font-size: 0.9rem;
+		&__download-window {
+			width: 320px;
+			height: 160px;
+			font-size: 2rem;
+			input {
+				width: 210px;
+				margin-top: 1.75em;
+				font-size: 0.9rem;
+			}
+			.download {
+				padding: 0.5em 1em;
+				font-size: 0.9rem;
+			}
+		}
+		.download-btn {
+			padding: 0.75em 1.5em;
+			font-size: 1.1rem;
+			border-radius: 20px;
 		}
 	}
 }
 @media (min-width: 992px) {
 	.training {
+		&__start-container {
+			width: 60vw;
+		}
 		&__name-section {
 			font-size: 2.5rem;
 		}
 		&__short-discription {
-			width: 40vw;
 			font-size: 1.05rem;
 		}
-		&__brand-general-section {
+		&__run-general-section {
 			font-size: 1.05rem;
 		}
-		&__brand-general-sections {
+		&__run-section {
+			margin: 0 2em;
+		}
+		&__run-general-sections {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+		}
+		.download-btn {
+			font-size: 1.2rem;
 		}
 	}
 }
