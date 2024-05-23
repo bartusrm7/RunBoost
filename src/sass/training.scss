@@ -9,7 +9,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
-.popular-brands {
+.training {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -46,7 +46,7 @@ body {
 	}
 	&__brand-section {
 		position: relative;
-		height: 25vh;
+		height: 30vh;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		justify-content: center;
@@ -88,10 +88,10 @@ body {
 		background-position: center;
 	}
 	.adidas {
-		background-image: url("../assets/brands/adidas.png");
+		background-image: url("../assets/brands/adidas.jpg");
 	}
 	.nike {
-		background-image: url("../assets/brands/nike.png");
+		background-image: url("../assets/brands/nike.jpg");
 	}
 	.asics {
 		background-image: url("../assets/brands/asics.png");
@@ -100,7 +100,7 @@ body {
 		background-image: url("../assets/brands/saucony.png");
 	}
 	.brooks {
-		background-image: url("../assets/brands/brooks.png");
+		background-image: url("../assets/brands/brooks.jpg");
 	}
 	.hoka {
 		background-image: url("../assets/brands/hoka.png");
@@ -109,11 +109,11 @@ body {
 		background-image: url("../assets/brands/salomon.png");
 	}
 	.altra {
-		background-image: url("../assets/brands/altra.png");
+		background-image: url("../assets/brands/altra.jpg");
 	}
 }
 @media (min-width: 376px) {
-	.popular-brands {
+	.training {
 		&__name-section {
 			font-size: 1.5rem;
 		}
@@ -131,7 +131,7 @@ body {
 	}
 }
 @media (min-width: 576px) {
-	.popular-brands {
+	.training {
 		&__name-section {
 			font-size: 1.8rem;
 		}
@@ -142,7 +142,7 @@ body {
 			text-align: center;
 		}
 		&__brand-general-section {
-			width: 90vw;
+			width: 65vw;
 		}
 		&__brand-general-sections {
 			display: grid;
@@ -154,16 +154,15 @@ body {
 	}
 }
 @media (min-width: 768px) {
-	.popular-brands {
+	.training {
 		&__name-section {
 			font-size: 2.2rem;
 		}
 		&__short-discription {
-			width: 60vw;
+			width: 55vw;
 			font-size: 0.95rem;
 		}
 		&__brand-general-section {
-			width: 75vw;
 			font-size: 0.95rem;
 		}
 		&__name-brand-section,
@@ -173,28 +172,20 @@ body {
 	}
 }
 @media (min-width: 992px) {
-	.popular-brands {
+	.training {
 		&__name-section {
 			font-size: 2.5rem;
 		}
 		&__short-discription {
-			width: 45vw;
+			width: 40vw;
 			font-size: 1.05rem;
 		}
 		&__brand-general-section {
-			width: 80vw;
 			font-size: 1.05rem;
 		}
 		&__brand-general-sections {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-}
-@media (min-width: 1200px) {
-	.popular-brands {
-		&__brand-general-section {
-			width: 70vw;
 		}
 	}
 }

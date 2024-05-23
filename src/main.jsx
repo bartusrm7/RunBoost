@@ -6,6 +6,7 @@ import "./sass/best-shoes-page.scss";
 import "./sass/best-shoes-component.scss";
 import "./sass/watches-component.scss";
 import "./sass/popular-brands-page.scss";
+import "./sass/training.scss";
 import "./sass/running-shoes-finder.scss";
 import "./sass/training-calculator.scss";
 import "./sass/watches-page.scss";

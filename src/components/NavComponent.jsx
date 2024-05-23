@@ -42,7 +42,7 @@ function NavComponent() {
 								<Link to='/popular-brands'>Popular Brands</Link>
 							</li>
 							<li className='nav__item'>
-								<Link to='/traninig'>Training</Link>
+								<Link to='/training'>Training</Link>
 							</li>
 							<li className='nav__item'>
 								<Link to='/training-calculator'>Running Calculator</Link>

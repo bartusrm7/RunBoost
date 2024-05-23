@@ -18,9 +18,7 @@ function PopularBrands() {
 						<div className='popular-brands__brand-general-sections'>
 							<div className='popular-brands__brand-section'>
 								<div className='popular-brands__brand-name'>ADIDAS</div>
-								<div className='popular-brands__brand-logo adidas'>
-									<img src='../assets/brands/adidas.jpg' alt='' />
-								</div>
+								<div className='popular-brands__brand-logo adidas'></div>
 							</div>
 							<div className='popular-brands__brand-section'>
 								<div className='popular-brands__brand-name'>NIKE</div>
