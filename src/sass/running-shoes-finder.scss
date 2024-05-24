@@ -78,6 +78,7 @@ body {
 		color: #212a31;
 		border: 2px solid #a64ac9;
 		border-radius: 10px;
+		overflow: hidden;
 	}
 	&__found-shoes-name,
 	&__found-shoes-price,
@@ -90,11 +91,10 @@ body {
 	}
 	.tooltip {
 		position: absolute;
-		bottom: 5%;
 		left: 50%;
-		padding: 1em;
 		width: 20px;
 		height: 20px;
+		bottom: 5%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -102,10 +102,30 @@ body {
 		color: #d1d7e0;
 		font-weight: bold;
 		font-size: 0.7rem;
+		transition: 0.3s;
 		transform: translateX(-50%);
 		border-radius: 50%;
 		border: 2px solid #a64ac9;
+		z-index: 1;
 		cursor: pointer;
+	}
+	.tooltip:hover + .tooltip-photo {
+		height: 100%;
+		width: 100%;
+		transition: 0.3s;
+		clip-path: circle(120% at 50% 90%);
+	}
+	.tooltip-photo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background-image: url("../assets/brands/adidas.png");
+		background-size: cover;
+		background-position: center;
+		transition: 0.3s;
+		clip-path: circle(5% at 50% 90%);
 	}
 }
 .hide {
@@ -150,7 +170,8 @@ body {
 			select {
 				width: 20vw;
 			}
-		}&__chosen-shoes-container{
+		}
+		&__chosen-shoes-container {
 			display: flex;
 		}
 		&__found-shoes-big-container {
