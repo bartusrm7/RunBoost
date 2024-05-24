@@ -32,10 +32,18 @@ function NavComponent() {
 							<li className='nav__item' style={{ fontWeight: "bold" }}>
 								<Link to='/'>Home</Link>
 							</li>
-							<li className='nav__item'>Best Shoes</li>
-							<li className='nav__item'>Watches</li>
-							<li className='nav__item'>Popular Brands</li>
-							<li className='nav__item'>Training</li>
+							<li className='nav__item'>
+								<Link to='/best-shoes'>Best Shoes</Link>
+							</li>
+							<li className='nav__item'>
+								<Link to='/watches'>Watches</Link>
+							</li>
+							<li className='nav__item'>
+								<Link to='/popular-brands'>Popular Brands</Link>
+							</li>
+							<li className='nav__item'>
+								<Link to='/training'>Training</Link>
+							</li>
 							<li className='nav__item'>
 								<Link to='/training-calculator'>Running Calculator</Link>
 							</li>

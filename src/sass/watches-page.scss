@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 62.5%;
+}
+.watches-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #d1d7e0;
+	color: #212a31;
+	&__start-container {
+		text-align: center;
+	}
+	&__name-section {
+		margin: 1em 0;
+		font-size: 1.2rem;
+	}
+	&__short-discription {
+		width: 70vw;
+		font-size: 0.7rem;
+	}
+	&__brand-general-section {
+		margin: 3em 1em;
+		display: grid;
+		background-color: #212a31;
+		color: #d1d7e0;
+		font-size: 0.7rem;
+		border-radius: 10px;
+		border: 1px solid #a64ac9;
+		overflow: hidden;
+	}
+	&__brand-type-name {
+		padding: 1em;
+		font-weight: bold;
+		background-color: #a64ac9;
+		text-align: center;
+	}
+	&__brand-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		overflow-x: auto;
+	}
+	&__brand-name-section {
+		height: 100%;
+		display: grid;
+		.name {
+			font-weight: bold;
+			text-align: right;
+		}
+		div {
+			padding: 0.5em 1em;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #d1d7e0;
+		}
+	}
+	&__brand-grid-row {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		div {
+			padding: 0.5em;
+			min-width: 18vw;
+			max-width: 25vw;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #d1d7e0;
+			overflow: hidden;
+		}
+	}
+	.narrow-view {
+		display: block;
+	}
+	.wide-view {
+		display: none;
+	}
+}
+@media (min-width: 376px) {
+	.watches-page {
+		&__name-section {
+			font-size: 1.5rem;
+		}
+		&__short-discription {
+			font-size: 0.85rem;
+		}
+		&__brand-general-section {
+			font-size: 0.85rem;
+		}
+		&__brand-grid-row {
+			div {
+				width: 50px;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.watches-page {
+		&__brand-name-section {
+			min-width: 10vw;
+			max-width: 25vw;
+		}
+	}
+}
+@media (min-width: 576px) {
+	.watches-page {
+		&__name-section {
+			font-size: 1.8rem;
+		}
+		&__brand-section {
+			display: grid;
+			grid-template-columns: 50% 25% 25%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		&__brand-general-section {
+			width: 65vw;
+		}
+		.narrow-view {
+			display: none;
+		}
+		.wide-view {
+			display: block;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.watches-page {
+		&__name-section {
+			font-size: 2.2rem;
+		}
+		&__short-discription {
+			width: 50vw;
+			font-size: 0.95rem;
+		}
+		&__brand-general-section {
+			font-size: 0.95rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.watches-page {
+		&__name-section {
+			font-size: 2.5rem;
+		}
+		&__short-discription {
+			width: 40vw;
+			font-size: 1.05rem;
+		}
+		&__brand-general-section {
+			font-size: 1.05rem;
+		}
+	}
+}

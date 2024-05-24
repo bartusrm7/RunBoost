@@ -1,6 +1,7 @@
 import NavComponent from "./NavComponent";
 import BestShoesComponent from "./BestShoesComponent";
 import AccesoriesComponent from "./WatchesComponent";
+import FooterComponent from "./FooterComponent";
 
 function Home() {
 	return (
@@ -9,6 +10,7 @@ function Home() {
 				<NavComponent />
 				<BestShoesComponent />
 				<AccesoriesComponent />
+				<FooterComponent />
 			</div>
 		</>
 	);

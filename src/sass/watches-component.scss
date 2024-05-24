@@ -11,7 +11,7 @@ body {
 	font-size: 62.5%;
 }
 .accesories {
-	height: 80vh;
+	min-height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
