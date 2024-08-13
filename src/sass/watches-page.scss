@@ -45,7 +45,7 @@ body {
 	}
 	&__brand-section {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -67,30 +67,6 @@ body {
 			border: 1px solid #d1d7e0;
 		}
 	}
-	&__brand-grid-row {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		justify-content: center;
-		align-items: center;
-		div {
-			padding: 0.5em;
-			min-width: 18vw;
-			max-width: 25vw;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 1px solid #d1d7e0;
-			overflow: hidden;
-		}
-	}
-	.narrow-view {
-		display: block;
-	}
-	.wide-view {
-		display: none;
-	}
 }
 @media (min-width: 376px) {
 	.watches-page {
@@ -102,19 +78,6 @@ body {
 		}
 		&__brand-general-section {
 			font-size: 0.85rem;
-		}
-		&__brand-grid-row {
-			div {
-				width: 50px;
-			}
-		}
-	}
-}
-@media (max-width: 576px) {
-	.watches-page {
-		&__brand-name-section {
-			min-width: 10vw;
-			max-width: 25vw;
 		}
 	}
 }
@@ -132,12 +95,6 @@ body {
 		}
 		&__brand-general-section {
 			width: 65vw;
-		}
-		.narrow-view {
-			display: none;
-		}
-		.wide-view {
-			display: block;
 		}
 	}
 }

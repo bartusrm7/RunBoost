@@ -7,14 +7,14 @@ function FooterComponent() {
 				<div className='footer__containers'>
 					<div className='footer__separate-component'>
 						<div className='footer__item'>
-							<span class='material-symbols-outlined'>smartphone</span> <div className='item-name'>693 361 782</div>
+							<span className='material-symbols-outlined'>smartphone</span> <div className='item-name'>693 361 782</div>
 						</div>
 						<div className='footer__item'>
-							<span class='material-symbols-outlined'>home</span>{" "}
+							<span className='material-symbols-outlined'>home</span>{" "}
 							<div className='item-name'>Canada GreenDay Street</div>
 						</div>
 						<div className='footer__item'>
-							<span class='material-symbols-outlined'>mail</span>
+							<span className='material-symbols-outlined'>mail</span>
 							<div className='item-name'>run_boost@running.com</div>
 						</div>
 					</div>
