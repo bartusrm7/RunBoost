@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function BestShoesPage() {
 	const asphaltShoes = [
@@ -17,10 +17,14 @@ function BestShoesPage() {
 		{ name: "Brooks Cascadia 17", weight: "325g", drop: "8mm", price: "140$" },
 		{ name: "Salomon Speedcross 6", weight: "295g", drop: "10mm", price: "140$" },
 	];
-
+	const [opacityClass, setOpacityClass] = useState("hide-opacity");
+	useEffect(() => {
+		setOpacityClass("display-opacity");
+	});
+	
 	return (
 		<div>
-			<div className='best-shoes-page'>
+			<div className={`best-shoes-page ${opacityClass}`}>
 				<div className='best-shoes-page__start-container'>
 					<h2 className='best-shoes-page__name-section'>BEST SHOES</h2>
 					<div className='best-shoes-page__short-discription'>

@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function PopularBrands() {
+	const [opacityClass, setOpacityClass] = useState("hide-opacity");
+	useEffect(() => {
+		setOpacityClass("display-opacity");
+	});
 	return (
 		<div>
-			<div className='popular-brands'>
+			<div className={`popular-brands ${opacityClass}`}>
 				<div className='popular-brands__start-container'>
 					<h2 className='popular-brands__name-section'>POPULAR BRANDS</h2>
 					<div className='popular-brands__short-discription'>

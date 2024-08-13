@@ -9,9 +9,7 @@ function BestShoesComponent() {
 					<p className='best-shoes__short-description'>
 						Answer for 4 simple questions and we will recommend three pair of shoes that will work well for you.
 					</p>
-					<button className='best-shoes__running-shoes-finder-btn'>
-						<Link to='/running-shoes-finder'>Running shoes finder</Link>
-					</button>
+					<Link to='/running-shoes-finder'>Running shoes finder</Link>
 				</div>
 
 				<div className='best-shoes__shoes-to-choose-section-container'>

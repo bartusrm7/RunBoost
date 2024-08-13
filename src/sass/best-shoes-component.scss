@@ -45,20 +45,18 @@ body {
 		font-size: 0.7rem;
 		text-align: center;
 	}
-	&__running-shoes-finder-btn {
+	a {
 		padding: 0.5em 1.5em;
 		margin: 1em;
 		background-color: #a64ac9;
 		color: #d1d7e0;
 		font-size: 0.8rem;
 		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
 		border-radius: 15px;
 		border: none;
 		cursor: pointer;
-	}
-	&__running-shoes-finder-btn a {
-		text-decoration: none;
-		color: #d1d7e0;
 	}
 	&__shoes-categories-container {
 		margin-bottom: 3em;
@@ -111,7 +109,7 @@ body {
 			max-width: 80vw;
 			font-size: 0.8rem;
 		}
-		&__running-shoes-finder-btn {
+		a {
 			font-size: 1rem;
 		}
 		&__shoes-category-item {
@@ -128,7 +126,7 @@ body {
 			max-width: 60vw;
 			font-size: 0.9rem;
 		}
-		&__running-shoes-finder-btn {
+		a {
 			font-size: 0.9rem;
 		}
 		&__shoes-categories-container {
@@ -154,7 +152,7 @@ body {
 			max-width: 40vw;
 			font-size: 1rem;
 		}
-		&__running-shoes-finder-btn {
+		a {
 			padding: 0.75em 1.5em;
 			font-size: 1.1rem;
 			border-radius: 20px;
@@ -166,7 +164,7 @@ body {
 		&__label {
 			font-size: 1.6rem;
 		}
-		&__running-shoes-finder-btn {
+		a {
 			font-size: 1.2rem;
 		}
 		&__shoes-category-name {

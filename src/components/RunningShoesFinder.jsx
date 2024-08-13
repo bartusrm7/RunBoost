@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function RunningShoesFinder() {
 	const [isStarted, setIsStarted] = useState(false);
@@ -238,6 +238,7 @@ function RunningShoesFinder() {
 	const [selectedAnswers, setSelectedAnswers] = useState({});
 	const [chosenShoesContainer, setChosenShoesContainer] = useState(false);
 	const [recommendedShoes, setRecommendedShoes] = useState([]);
+	const [opacityClass, setOpacityClass] = useState("hide-opacity");
 
 	const handleIsStarted = () => {
 		setSelectedAnswers({});
@@ -251,17 +252,21 @@ function RunningShoesFinder() {
 			[question]: [value],
 		}));
 	};
-	function handleChosenShoesByUser() {
+	const handleChosenShoesByUser = () => {
 		const selectedKey = Object.values(selectedAnswers).join(",");
 		const shoes = shoesMap[selectedKey] || [];
 
 		setRecommendedShoes(prevState => [...prevState, shoes]);
 		setIsStarted(false);
 		setChosenShoesContainer(true);
-	}
+	};
+	useEffect(() => {
+		setOpacityClass("display-opacity");
+	});
+
 	return (
 		<div>
-			<div className='running-shoes-finder'>
+			<div className={`running-shoes-finder ${opacityClass}`}>
 				<h2 className='running-shoes-finder__name'>Running Shoes Finder</h2>
 
 				<div className={`running-shoes-finder__start-container ${isStarted ? "hide" : "show"}`}>

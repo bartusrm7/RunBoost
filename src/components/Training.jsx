@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Training() {
 	const [isOpened, setIsOpened] = useState(false);
+	const [opacityClass, setOpacityClass] = useState("hide-opacity");
 	const handleOpen = () => {
 		setIsOpened(true);
 	};
 	const handleClose = () => {
 		setIsOpened(false);
 	};
+	useEffect(() => {
+		setOpacityClass("display-opacity");
+	});
 
 	return (
 		<div>
-			<div className='training'>
+			<div className={`training ${opacityClass}`}>
 				<div className='training__start-container'>
 					<h2 className='training__name-section'>TRAINING PLANS FOR BEGINNERS</h2>
 					<div className='training__short-discription'>

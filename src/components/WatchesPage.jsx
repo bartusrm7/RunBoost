@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function WatchesPage() {
 	const garminWatch = [
@@ -19,9 +19,14 @@ function WatchesPage() {
 		{ name: "Suunto 9 Peak Pro", battery: "120 hrs", price: "280$" },
 		{ name: "Suunto Core Alpha", battery: "138 hrs", price: "390$" },
 	];
+	const [opacityClass, setOpacityClass] = useState("hide-opacity");
+	useEffect(() => {
+		setOpacityClass("display-opacity");
+	});
+
 	return (
 		<div>
-			<div className='watches-page'>
+			<div className={`watches-page ${opacityClass}`}>
 				<div className='watches-page__start-container'>
 					<h2 className='watches-page__name-section'>WATCHES</h2>
 					<div className='watches-page__short-discription'>
