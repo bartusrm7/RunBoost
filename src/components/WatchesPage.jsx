@@ -28,7 +28,7 @@ function WatchesPage() {
 					</div>
 				</div>
 
-				<div className='watches-page__brand-sections wide-view'>
+				<div className='watches-page__brand-sections'>
 					<div className='watches-page__brand-general-section'>
 						<div className='watches-page__brand-type-name'>GARMIN</div>
 						<div className='watches-page__brand-section'>
