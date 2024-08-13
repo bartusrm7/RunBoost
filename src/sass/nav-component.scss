@@ -11,9 +11,19 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
+.hide-opacity {
+	opacity: 0;
+}
+.display-opacity {
+	opacity: 1;
+}
+.home {
+	transition: opacity 0.3s;
+}
 .nav {
-	height: 100vh;
 	position: relative;
+	height: 100vh;
+	transition: opacity 0.3s;
 	&__container {
 		position: fixed;
 		width: 100%;

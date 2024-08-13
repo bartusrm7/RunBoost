@@ -9,12 +9,19 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
+.hide-opacity {
+	opacity: 0;
+}
+.display-opacity {
+	opacity: 1;
+}
 .training {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	transition: opacity 0.3s;
 	background-color: #212a31;
 	color: #d1d7e0;
 	&__start-container {

@@ -9,11 +9,18 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
+.hide-opacity {
+	opacity: 0;
+}
+.display-opacity {
+	opacity: 1;
+}
 .watches-page {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	transition: opacity 0.3s;
 	background-color: #d1d7e0;
 	color: #212a31;
 	&__start-container {

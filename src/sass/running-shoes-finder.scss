@@ -10,6 +10,12 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
 }
+.hide-opacity {
+	opacity: 0;
+}
+.display-opacity {
+	opacity: 1;
+}
 .running-shoes-finder {
 	height: 100vh;
 	display: flex;
@@ -17,6 +23,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	transition: opacity 0.3s;
 	color: #d1d7e0;
 	&__start-container {
 		text-align: center;

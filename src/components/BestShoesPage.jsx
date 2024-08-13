@@ -1,22 +1,22 @@
 import { useState } from "react";
 
 function BestShoesPage() {
-	const [asphaltShoes, setAsphaltShoes] = useState([
+	const asphaltShoes = [
 		{ name: "Nike Alphafly 3", weight: "218g", drop: "8mm", price: "285$" },
 		{ name: "Nike Vaporfly 3", weight: "198g", drop: "8mm", price: "240$" },
 		{ name: "New Balance SuperComp Elite v4", weight: "237g", drop: "6mm", price: "260$" },
 		{ name: "Adidas Adizero Adios Pro 3", weight: "223g", drop: "6.5mm", price: "220$" },
 		{ name: "Asics Metaspeed", weight: "188g", drop: "5mm", price: "220$" },
 		{ name: "Saucony Endorphin Pro 4", weight: "212g", drop: "8mm", price: "180$" },
-	]);
-	const [trailShoes, setTrailShoes] = useState([
+	];
+	const trailShoes = [
 		{ name: "HOKA Mafate Speed 4", weight: "295g", drop: "4mm", price: "185$" },
 		{ name: "HOKA Speedgoat 5", weight: "305g", drop: "6mm", price: "155$" },
 		{ name: "Saucony Peregrine 14", weight: "266g", drop: "4mm", price: "140$" },
 		{ name: "Altra Lone Peak 8", weight: "310g", drop: "0mm", price: "140$" },
 		{ name: "Brooks Cascadia 17", weight: "325g", drop: "8mm", price: "140$" },
 		{ name: "Salomon Speedcross 6", weight: "295g", drop: "10mm", price: "140$" },
-	]);
+	];
 
 	return (
 		<div>
