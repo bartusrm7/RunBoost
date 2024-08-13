@@ -1,24 +1,23 @@
-import { useState } from "react";
-
 function WatchesPage() {
-	const [garminWatch, setGarminWatch] = useState([
+	const garminWatch = [
 		{ name: "Garmin Forerunner 245", battery: "24 hrs", price: "350$" },
 		{ name: "Garmin VivoActive 4", battery: "18 hrs", price: "320$" },
 		{ name: "Garmin Fenix", battery: "10 hrs", price: "600$" },
 		{ name: "Garmin VivoActive 4", battery: "18 hrs", price: "320$" },
-	]);
-	const [polarWatch, setPolarWatch] = useState([
+	];
+	const polarWatch = [
 		{ name: "Polar Vantage M", battery: "30 hrs", price: "250$" },
 		{ name: "Polar Ignite", battery: "22 hrs", price: "230$" },
 		{ name: "Polar Grit X2 Pro", battery: "43 hrs", price: "800$" },
 		{ name: "Polar Vantage V3", battery: "40 hrs", price: "620$" },
-	]);
-	const [suuntonWatch, setSuuntonWatch] = useState([
+	];
+	const suuntonWatch = [
 		{ name: "Suunto Race", battery: "26 hrs", price: "400$" },
 		{ name: "Suunto Vertical", battery: "85 hrs", price: "650$" },
 		{ name: "Suunto 9 Peak Pro", battery: "120 hrs", price: "280$" },
 		{ name: "Suunto Core Alpha", battery: "138 hrs", price: "390$" },
-	]);
+	];
+
 	return (
 		<div>
 			<div className='watches-page'>
@@ -26,77 +25,6 @@ function WatchesPage() {
 					<h2 className='watches-page__name-section'>WATCHES</h2>
 					<div className='watches-page__short-discription'>
 						Check the three watches brands! Find watch which will be the best for you!
-					</div>
-				</div>
-
-				<div className='watches-page__brand-sections narrow-view'>
-					<div className='watches-page__brand-general-section'>
-						<div className='watches-page__brand-type-name'>GARMIN</div>
-						<div className='watches-page__brand-section'>
-							<div className='watches-page__brand-name-section'>
-								<div className='name'>Name</div>
-								<div className='name'>Battery</div>
-								<div className='name'>Price</div>
-							</div>
-
-							<div className='watches-page__brand-grid-row'>
-								{garminWatch.map((garmin, index) => (
-									<div key={index}>{garmin.name}</div>
-								))}
-								{garminWatch.map((garmin, index) => (
-									<div key={index}>{garmin.battery}</div>
-								))}
-								{garminWatch.map((garmin, index) => (
-									<div key={index}>{garmin.price}</div>
-								))}
-							</div>
-						</div>
-					</div>
-
-					<div className='watches-page__brand-general-section'>
-						<div className='watches-page__brand-type-name'>POLAR</div>
-						<div className='watches-page__brand-section'>
-							<div className='watches-page__brand-name-section'>
-								<div className='name'>Name</div>
-								<div className='name'>Battery</div>
-								<div className='name'>Price</div>
-							</div>
-
-							<div className='watches-page__brand-grid-row'>
-								{polarWatch.map((polar, index) => (
-									<div key={index}>{polar.name}</div>
-								))}
-								{polarWatch.map((polar, index) => (
-									<div key={index}>{polar.battery}</div>
-								))}
-								{polarWatch.map((polar, index) => (
-									<div key={index}>{polar.price}</div>
-								))}
-							</div>
-						</div>
-					</div>
-
-					<div className='watches-page__brand-general-section'>
-						<div className='watches-page__brand-type-name'>SUUNTO</div>
-						<div className='watches-page__brand-section'>
-							<div className='watches-page__brand-name-section'>
-								<div className='name'>Name</div>
-								<div className='name'>Battery</div>
-								<div className='name'>Price</div>
-							</div>
-
-							<div className='watches-page__brand-grid-row'>
-								{suuntonWatch.map((suunton, index) => (
-									<div key={index}>{suunton.name}</div>
-								))}
-								{suuntonWatch.map((suunton, index) => (
-									<div key={index}>{suunton.battery}</div>
-								))}
-								{suuntonWatch.map((suunton, index) => (
-									<div key={index}>{suunton.price}</div>
-								))}
-							</div>
-						</div>
 					</div>
 				</div>
 

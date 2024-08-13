@@ -3,17 +3,13 @@ import { Link } from "react-router-dom";
 
 function NavComponent() {
 	const [hamburgerMenu, setHamburgerMenu] = useState(false);
+	const [isOpenedMenu, setIsOpenedMenu] = useState(false);
+
 	const handleHamburgerMenu = () => {
 		setHamburgerMenu(!hamburgerMenu);
-		isOpenedMenu();
+		setIsOpenedMenu(!isOpenedMenu);
 	};
-	const isOpenedMenu = () => {
-		const navItems = document.querySelector(".nav__items").classList.toggle("show-items");
-		Array.from(document.querySelectorAll(".nav__item")).forEach(navItem => {
-			navItem.classList.toggle("display-flex");
-		});
-		setHamburgerMenu(!hamburgerMenu);
-	};
+
 	return (
 		<>
 			<div>
@@ -28,7 +24,7 @@ function NavComponent() {
 								menu
 							</span>
 						)}
-						<ul className='nav__items'>
+						<ul className={`nav__items ${isOpenedMenu ? "display-flex" : ""}`}>
 							<li className='nav__item' style={{ fontWeight: "bold" }}>
 								<Link to='/'>Home</Link>
 							</li>
@@ -44,14 +40,10 @@ function NavComponent() {
 							<li className='nav__item'>
 								<Link to='/training'>Training</Link>
 							</li>
-							<li className='nav__item'>
-								<Link to='/training-calculator'>Running Calculator</Link>
-							</li>
 						</ul>
 					</div>
-					<div className='nav__search-container'>
-						<input className='nav__search-input'></input>
-						<button className='nav__search-btn'>Search</button>
+					<div className='nav__label-container'>
+						<h1 className='nav__label'>RunBoost</h1>
 					</div>
 
 					<div className='nav__photo'></div>
