@@ -26,7 +26,9 @@ function NavComponent() {
 						)}
 						<ul className={`nav__items ${isOpenedMenu ? "display-flex" : ""}`}>
 							<li className='nav__item' style={{ fontWeight: "bold" }}>
-								<Link to='/'>Home</Link>
+								<Link to='/' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+									Home
+								</Link>
 							</li>
 							<li className='nav__item'>
 								<Link to='/best-shoes'>Best Shoes</Link>
