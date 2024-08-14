@@ -277,7 +277,6 @@ function RunningShoesFinder() {
 						ACCEPT CHOICES
 					</button>
 				</div>
-				
 				<div className={`running-shoes-finder__chosen-shoes-container ${chosenShoesContainer ? "show" : "hide"}`}>
 					{recommendedShoes.map(shoes => (
 						<div key={shoes} className='running-shoes-finder__found-shoes-big-container'>
