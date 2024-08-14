@@ -246,7 +246,6 @@ function RunningShoesFinder() {
 		<div>
 			<div className={`running-shoes-finder ${opacityClass}`}>
 				<h2 className='running-shoes-finder__name'>Running Shoes Finder</h2>
-
 				<div className={`running-shoes-finder__start-container ${isStarted ? "hide" : "show"}`}>
 					<div className='running-shoes-finder__short-discription'>
 						Our program will find the right shoes special for you!
@@ -255,7 +254,6 @@ function RunningShoesFinder() {
 						START
 					</button>
 				</div>
-
 				<div className={`running-shoes-finder__search-container ${isStarted ? "show" : "hide"}`}>
 					{questions.map(({ id, question, values }) => (
 						<div key={id} className='running-shoes-finder__choosing-container'>
@@ -277,7 +275,6 @@ function RunningShoesFinder() {
 						ACCEPT CHOICES
 					</button>
 				</div>
-
 				<div className={`running-shoes-finder__chosen-shoes-container ${chosenShoesContainer ? "show" : "hide"}`}>
 					{recommendedShoes.map(shoes => (
 						<div key={shoes} className='running-shoes-finder__found-shoes-big-container'>
