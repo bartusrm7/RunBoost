@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #212a31;
+	font-family: "Montserrat", sans-serif;
+	font-size: 62.5%;
+}
+.hide-opacity {
+	opacity: 0;
+}
+.display-opacity {
+	opacity: 1;
+}
+.running-shoes-finder {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: opacity 0.3s;
+	color: #d1d7e0;
+	&__start-container {
+		text-align: center;
+	}
+	&__name {
+		margin: 0 1em;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	&__short-discription {
+		margin: 2em 3em;
+		font-size: 0.7rem;
+	}
+	&__start-btn {
+		padding: 0.5em 1.5em;
+		margin-bottom: 1em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-weight: bold;
+		border: none;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+	&__search-container {
+		margin: 3em;
+		transition: opacity 0.3s;
+	}
+	&__choosing-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: opacity 0.3s;
+		label {
+			margin: 0.5em 2em 0.5em 0;
+			font-size: 0.7rem;
+		}
+		select {
+			padding: 0 0.25em;
+			width: 40vw;
+			background-color: #d1d7e0;
+			color: #212a31;
+			border-radius: 5px;
+		}
+	}
+	&__accept-choices-btn {
+		padding: 0.5em 1.5em;
+		margin-top: 3em;
+		background-color: #a64ac9;
+		color: #d1d7e0;
+		font-weight: bold;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
+	}
+	&__found-shoes-container {
+		position: relative;
+		margin: 2em;
+		width: 180px;
+		height: 220px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #d1d7e0;
+		color: #212a31;
+		border: 2px solid #a64ac9;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	&__found-shoes-name,
+	&__found-shoes-price,
+	&__found-shoes-discription {
+		margin: 1.5em;
+		font-size: 0.7rem;
+	}
+	&__found-shoes-name {
+		font-weight: bold;
+	}
+}
+.error {
+	margin-top: 3em;
+	font-size: 0.7rem;
+	color: red;
+}
+.hide {
+	display: none;
+	opacity: 0;
+}
+.show {
+	display: block;
+	opacity: 1;
+}
+@media (min-width: 376px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 1.5rem;
+		}
+		&__short-discription {
+			font-size: 0.85rem;
+		}
+		&__start-btn {
+			font-size: 1rem;
+		}
+		&__choosing-container {
+			select {
+				width: 25vw;
+			}
+		}
+		&__accept-choices-btn {
+			font-size: 1rem;
+		}
+		&__found-shoes-container {
+			width: 250px;
+		}
+	}
+}
+@media (min-width: 576px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 1.8rem;
+		}
+		&__choosing-container {
+			label {
+				font-size: 0.8rem;
+			}
+			select {
+				width: 20vw;
+			}
+		}
+		&__chosen-shoes-container {
+			display: flex;
+		}
+		&__found-shoes-big-container {
+			display: flex;
+		}
+		&__found-shoes-container {
+			height: 250px;
+		}
+		&__found-shoes-name,
+		&__found-shoes-price,
+		&__found-shoes-discription {
+			font-size: 0.8rem;
+		}
+	}
+	.error {
+		font-size: 0.8rem;
+	}
+}
+@media (min-width: 768px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 2.2rem;
+		}
+		&__short-discription {
+			font-size: 0.95rem;
+		}
+		&__start-btn {
+			padding: 0.75em 1.5em;
+			font-size: 1.1rem;
+			border-radius: 20px;
+		}
+		&__choosing-container {
+			select {
+				width: 15vw;
+			}
+		}
+		&__accept-choices-btn {
+			padding: 0.75em 1.5em;
+			font-size: 1.1rem;
+			border-radius: 20px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.running-shoes-finder {
+		&__name {
+			font-size: 2.5rem;
+		}
+		&__short-discription {
+			font-size: 1.05rem;
+		}
+		&__start-btn {
+			font-size: 1.2rem;
+		}
+		&__choosing-container {
+			label {
+				font-size: 0.9rem;
+			}
+			select {
+				width: 12vw;
+			}
+		}
+		&__accept-choices-btn {
+			font-size: 1.2rem;
+		}
+		&__found-shoes-name,
+		&__found-shoes-price,
+		&__found-shoes-discription {
+			font-size: 0.9rem;
+		}
+	}
+	.error {
+		font-size: 0.9rem;
+	}
+}
