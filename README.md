@@ -7,9 +7,11 @@ RunBoost is a simple page where we can find quality items for running.
 On the main page we can find simply nav bar and few photos with popular brands. This page is full responsive.
 
 Mobile:
+
 <img src="/src/assets/Zrzut ekranu 2024-08-28 141333.png" width="150" height="250" /> <img src="/src/assets/Zrzut ekranu 2024-08-28 141359.png" width="150" height="250" />
 
 Desktop:
+
 <img src="/src/assets/Zrzut ekranu 2024-08-28 141928.png" width="450" height="250" /> <img src="/src/assets/Zrzut ekranu 2024-08-28 141943.png" width="450" height="250" />
 
 ## Best Shoes
@@ -41,9 +43,11 @@ Here we can download training plan for 5k, 10k, half-marathon or even marathon.
 On the home page are founding tab where we can find perfect shoes for running on asphalt either trail.
 
 Mobile:
+
 <img src="/src/assets/Zrzut ekranu 2024-08-28 141710.png" width="150" height="250" /> <img src="/src/assets/Zrzut ekranu 2024-08-28 141806.png" width="450" height="250" />
 
 Desktop:
+
 <img src="/src/assets/Zrzut ekranu 2024-08-28 141834.png" width="150" height="250" /> <img src="/src/assets/Zrzut ekranu 2024-08-28 143651.png" width="450" height="250" />
 
 ## How to install?
