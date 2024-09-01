@@ -2,7 +2,7 @@
 
 RunBoost is a simple page where we can find quality items for running.
 
-## About project
+## Project description
 
 On the main page we can find simply nav bar and few photos with popular brands. This page is full responsive.
 
